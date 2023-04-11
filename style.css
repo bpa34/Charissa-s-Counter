@@ -1,8 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Quicksand', sans-serif;
-    
+    font-family: 'Hind Madurai', sans-serif;
+
 }
 
 html {
@@ -14,14 +14,18 @@ html {
     --spacing-1: .5rem;
     --spacing-2: .75rem;
     --spacing-3: 1rem;
-    --spacing-4: 1.5rem;
+    --spacing-4: 1.25rem;
 
-    --border-radius: 5px;
+    --border-radius: 8px;
 
     --font-color1: white;
     --font-color2: black;
-    
 
+
+}
+
+a {
+    text-decoration: none;
 }
 
 
@@ -31,11 +35,14 @@ body {
     flex-direction: column;
     overflow: auto;
     min-height: 100vh;
-    background-image: url("Resources/spring-peonies-2022-01-31-17-51-52-utc.jpg") ;
+    background-image: url("Resources/spring-peonies-2022-01-31-17-51-52-utc.jpg");
     background-repeat: no-repeat;
-	background-position: center;
-	Background-size: cover;
+    background-position: center;
+    Background-size: cover;
+    min-height: 100vh;
 }
+
+
 
 
 @media only screen and (min-width: 950px) {
@@ -48,14 +55,38 @@ body {
         min-width: 600px;
         max-width: 1200px;
         margin: auto;
-        
+
     }
-    
+
+    /* header */
+    header {
+        width: 100%;
+
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        padding: var(--spacing-3) var(--spacing-3);
+        margin: auto;
+        min-width: 600px;
+        max-width: 1200px;
+    }
+
     #title {
-        margin: var(--spacing-3) 0;
-        font-size: 3rem;
+        font-size: 4rem;
     }
-    
+
+    #date_time {
+        margin-left: auto;
+    }
+
+    #date_time p {
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+
+
     /* Counters */
 
     #counterContainer {
@@ -70,16 +101,87 @@ body {
     .infoContainer p {
         display: flex;
         justify-content: center;
-        font-size: var(--spacing-3);
+        font-size: var(--spacing-4);
         font-weight: 500;
     }
 
     /* Text Area */
     #userInput {
-        width: 100%; 
+        width: 100%;
         height: 400px;
         font-size: 16px;
         border-radius: var(--border-radius);
+        padding: 10px 0 0 10px;
+        box-sizing: border-box;
+    }
+
+    /* buttons */
+    #buttonContainer {
+        display: flex;
+        
+    }
+
+    button {
+        margin: var(--spacing-3) var(--spacing-3) 0 0;
+    }
+
+
+    .button-56 {
+        align-items: center;
+        background-color: #dfc5d9;
+        border: 2px solid #111;
+        border-radius: 8px;
+        box-sizing: border-box;
+        color: #111;
+        cursor: pointer;
+        display: flex;
+        font-family: Inter, sans-serif;
+        font-size: 16px;
+        height: 48px;
+        justify-content: center;
+        line-height: 24px;
+        max-width: 100%;
+        padding: 0 25px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+
+    .button-56:after {
+        background-color: #111;
+        border-radius: 8px;
+        content: "";
+        display: block;
+        height: 48px;
+        left: 0;
+        width: 100%;
+        position: absolute;
+        top: -2px;
+        transform: translate(8px, 8px);
+        transition: transform .2s ease-out;
+        z-index: -1;
+    }
+
+    .button-56:hover:after {
+        transform: translate(0, 0);
+    }
+
+    .button-56:active {
+        background-color: #ffdeda;
+        outline: 0;
+    }
+
+    .button-56:hover {
+        outline: 0;
+    }
+
+    @media (min-width: 768px) {
+        .button-56 {
+            padding: 0 40px;
+        }
     }
 
 }

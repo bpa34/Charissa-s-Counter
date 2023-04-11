@@ -7,17 +7,22 @@
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
- 
-    
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
 </head>
+
 <body>
     <header>
+        <nav>
+            <h1 id="title"></h1>
+            <div id="date_time">
+                <p id="date"></p>
+            </div>
+        </nav>
     </header>
     <main>
-        <div id="page">
-            <h1 id="title">Charissa's Counter</h1>
-            <div id="date&time"></div>
+        <div id="page">                        
             <div id="counterContainer">
                 <div id="characterCount" class="infoContainer">
                     <h3>Character Count:</h3>
@@ -32,7 +37,17 @@
                     <p id="sentenceCounter">0</p>
                 </div>
             </div>
-            <textarea type="text" id="userInput" placeholder="Enter your text here"></textarea>
+            <textarea type="text"  id="userInput" placeholder="Enter your text here"></textarea>
+            <div id="buttonContainer">
+                <a href="https://docs.google.com/document/u/0/" target="_blank" >
+                    <button class="button-56" role="button">Google Docs</button>
+                </a>
+                <a href="https://chat.openai.com" target="_blank">
+                    <button class="button-56" role="button">Chat GPT</button>
+                </a>
+                
+            </div>
+
         </div>
     </main>
     <script src="main.js"></script>

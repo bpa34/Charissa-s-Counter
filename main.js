@@ -2,7 +2,8 @@ const userInput = document.getElementById('userInput');
 const characterCounter = document.getElementById('characterCountNumber');
 const wordCounter = document.getElementById('wordCounter');
 const sentenceCounter = document.getElementById('sentenceCounter');
-const date = document.getElementById('date&time')
+const userGreeting = document.getElementById('title')
+
 
 function countCharacters() {
   const currentLength = userInput.value.length;
@@ -26,4 +27,26 @@ userInput.addEventListener('input', () => {
   countSentences();
 });
 
+let date = new Date()
+let currentDate = (date.getMonth()+1) + "-" + date.getDate() + "-"+ date.getFullYear();
+document.getElementById('date').innerHTML = currentDate
 
+
+let hours = date.getHours()
+switch (true) {
+  case (hours < 4):
+    document.getElementById('title').innerHTML = 'Good Evening Charissa';
+    break
+  case (hours >= 4 && hours < 12):
+    document.getElementById('title').innerHTML = 'Good Morning Charissa &#9749';
+    break
+  case (hours >= 12 && hours < 17):
+    document.getElementById('title').innerHTML = 'Good Afternoon Charissa &#x1F33B';
+    break
+  case (hours >= 17 && hours < 24):
+    document.getElementById('title').innerHTML = 'Good Evening Charissa';
+    break
+  default:
+    document.getElementById('title').innerHTML = 'Welcome Charissa!';
+    break
+}
