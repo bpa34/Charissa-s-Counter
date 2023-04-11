@@ -2,6 +2,7 @@ const userInput = document.getElementById('userInput');
 const characterCounter = document.getElementById('characterCountNumber');
 const wordCounter = document.getElementById('wordCounter');
 const sentenceCounter = document.getElementById('sentenceCounter');
+const date = document.getElementById('date&time')
 
 function countCharacters() {
   const currentLength = userInput.value.length;
@@ -24,3 +25,5 @@ userInput.addEventListener('input', () => {
   countWords();
   countSentences();
 });
+
+
