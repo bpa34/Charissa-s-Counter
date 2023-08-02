@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Hind Madurai', sans-serif;
-
+   
 }
 
 html {
@@ -108,7 +108,7 @@ body {
     /* Text Area */
     #userInput {
         width: 100%;
-        height: 400px;
+        height: 250px;
         font-size: 16px;
         border-radius: var(--border-radius);
         padding: 10px 0 0 10px;
@@ -118,7 +118,7 @@ body {
     /* buttons */
     #buttonContainer {
         display: flex;
-        
+
     }
 
     button {
@@ -126,7 +126,7 @@ body {
     }
 
 
-    .button-56 {
+    #button-56 {
         align-items: center;
         background-color: #dfc5d9;
         border: 2px solid #111;
@@ -148,9 +148,10 @@ body {
         user-select: none;
         -webkit-user-select: none;
         touch-action: manipulation;
+        
     }
 
-    .button-56:after {
+    #button-56:after {
         background-color: #111;
         border-radius: 8px;
         content: "";
@@ -165,23 +166,74 @@ body {
         z-index: -1;
     }
 
-    .button-56:hover:after {
+    #button-56:hover:after {
         transform: translate(0, 0);
     }
 
-    .button-56:active {
+    #button-56:active {
         background-color: #ffdeda;
         outline: 0;
+        
     }
 
-    .button-56:hover {
+    #button-56:hover {
         outline: 0;
+        
     }
 
-    @media (min-width: 768px) {
-        .button-56 {
-            padding: 0 40px;
-        }
+    /* Banner 2 */ 
+
+    #second-banner {
+        display: flex;
     }
+
+    /* Stopwatch */ 
+
+    .container {
+        text-align: center;
+        border: 2px solid #111;
+        background-color: #f4f4f4;
+        border-radius: 8px;
+        text-align: center;
+        margin-left: auto;
+        
+    }
+
+    .stopwatch {
+        display: inline-block;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .display {
+        font-size: 2em;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #timerButtonContainer {
+        display: inline-flex;
+    }
+
+    
+
+    
+
+    
+
+    
+
+   
+
+
+
+
 
 }
+
