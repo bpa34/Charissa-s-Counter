@@ -35,16 +35,16 @@ document.getElementById('date').innerHTML = currentDate
 let greetingHours = date.getHours()
 switch (true) {
   case (greetingHours < 4):
-    document.getElementById('title').innerHTML = 'Good Evening Charissa';
+    document.getElementById('title').innerHTML = 'Good Evening, Charissa';
     break
   case (greetingHours >= 4 && greetingHours < 12):
-    document.getElementById('title').innerHTML = 'Good Morning Charissa &#9749';
+    document.getElementById('title').innerHTML = 'Good Morning, Charissa &#9749';
     break
   case (greetingHours >= 12 && greetingHours < 17):
-    document.getElementById('title').innerHTML = 'Good Afternoon Charissa &#x1F33B';
+    document.getElementById('title').innerHTML = 'Good Afternoon, Charissa &#x1F33B';
     break
   case (greetingHours >= 17 && greetingHours < 24):
-    document.getElementById('title').innerHTML = 'Good Evening Charissa';
+    document.getElementById('title').innerHTML = 'Good Evening, Charissa';
     break
   default:
     document.getElementById('title').innerHTML = 'Welcome Charissa!';
