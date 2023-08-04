@@ -69,11 +69,7 @@ body {
         align-items: center;
         padding: var(--spacing-3) var(--spacing-3);
         margin: auto;
-        background-color: white;
         justify-content: center;
-        border-bottom: 2px solid #111;
-        /* border-bottom-left-radius: 8px;
-        border-bottom-right-radius: 8px; */
     }
 
     #titleBar {
@@ -87,13 +83,66 @@ body {
 
     #title {
         font-size: 4rem;
+        align-items: center;
+        background-color: white;
+        border: 2px solid #111;
+        border-radius: 8px;
+        box-sizing: border-box;
+        color: #111;
+        display: flex;
+        height: 6.25rem;
+        justify-content: center;
+        padding: 0 25px;
+        position: relative;
+        text-align: center;
+    }
+
+    #title::after {
+        transform: translate(8px, 8px);
+        background-color: black;
+        z-index: -1;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: -2px;
+        display: block;
+        content: "";
+        border-radius: var(--border-radius);
+        height: 100px;
     }
 
     #date_time {
-        margin-left: auto;
+        align-items: center;
+        background-color: white;
         border: 2px solid #111;
-        border-radius: 9px;
-        background-color: #dfc5d9;
+        border-radius: 8px;
+        box-sizing: border-box;
+        color: #111;
+        display: flex;
+        font-family: Inter, sans-serif;
+        font-size: 16px;
+        height: 48px;
+        justify-content: center;
+        line-height: 24px;
+        max-width: 100%;
+        padding: 0 25px;
+        position: relative;
+        text-align: center;
+        margin-left: auto;
+    }
+
+    #date_time:after {
+        transform: translate(8px, 8px);
+        background-color: black;
+        z-index: -1;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: -2px;
+        display: block;
+        content: "";
+        border-radius: var(--border-radius);
+        height: 48px;
     }
 
 
@@ -139,6 +188,7 @@ body {
         box-sizing: border-box;
         border: 2px solid #111;
         background-color: #f4f4f4;
+        resize: none;
     }
 
     /* buttons */
@@ -147,12 +197,10 @@ body {
 
     }
 
-    button {
-        margin: var(--spacing-3) var(--spacing-3) 0 0;
-    }
+    
 
 
-    #button-56 {
+    .button-56 {
         align-items: center;
         background-color: #dfc5d9;
         border: 2px solid #111;
@@ -174,10 +222,10 @@ body {
         user-select: none;
         -webkit-user-select: none;
         touch-action: manipulation;
-        
+        margin: var(--spacing-1);
     }
 
-    #button-56:after {
+    .button-56:after {
         background-color: #111;
         border-radius: 8px;
         content: "";
@@ -192,17 +240,17 @@ body {
         z-index: -1;
     }
 
-    #button-56:hover:after {
+    .button-56:hover:after {
         transform: translate(0, 0);
     }
 
-    #button-56:active {
+    .button-56:active {
         background-color: #ffdeda;
         outline: 0;
         
     }
 
-    #button-56:hover {
+    .button-56:hover {
         outline: 0;
         
     }
@@ -213,16 +261,73 @@ body {
         display: flex;
     }
 
+    /* Links */
+
+    .linkContainer {
+        background-color: white;
+        padding: var(--spacing-2);
+        border-radius: var(--border-radius);
+        border: 2px solid #111;
+        z-index: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .linkContainer a {
+        width: 60%; /* Adjust the width as needed to create the gap between the columns */
+        margin-bottom: var(--spacing-1);
+    }
+    
+
+    
+
     /* Stopwatch */ 
+
+    #hoursLog {
+        background-color: #dfc5d9;
+        border: 2px solid #111;
+        border-radius: 8px;
+        box-sizing: border-box;
+        color: #111;
+        font-family: Inter, sans-serif;
+        padding: var(--spacing-1);
+        text-align: center;
+        display: flex;
+        height: 3rem;
+        position: relative;
+        align-items: center;
+    }
+
+    #hoursLog:after {
+        transform: translate(8px, 8px);
+        background-color: black;
+        z-index: -1;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        top: -2px;
+        display: block;
+        content: "";
+        border-radius: var(--border-radius);
+        height: 3rem;
+    }
+
+
 
     .container {
         text-align: center;
         border: 2px solid #111;
         background-color: #f4f4f4;
         border-radius: 8px;
-        text-align: center;
+        align-items: center;
         margin-left: auto;
+        justify-content: center;
         z-index: 0;
+        padding: var(--spacing-2);
+        display: flex;
+        position: relative;
+        height: auto;
     }
 
     
@@ -248,6 +353,11 @@ body {
     #timerButtonContainer {
         display: inline-flex;
         z-index: 1;
+        
+    }
+
+    .timerNumber {
+        font-size: 2.5rem;
     }
 
     

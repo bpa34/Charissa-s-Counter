@@ -76,14 +76,17 @@ function toggleStartStop() {
   }
 }
 
+
 function resetTimer() {
   clearInterval(interval);
   interval = null;
   elapsedSeconds = 0;
+  startTime = Date.now(); // Set startTime to the current time
+  updateTimer(); // Update the displayed timer to 00:00:00
   startStopBtn.textContent = 'Start';
-  updateTimer();
-  startTime = Date.now() - elapsedSeconds * 1000; // update the startTime after updating elapsedSeconds
 }
+
+
 
 
 function updateTimer() {
@@ -98,6 +101,7 @@ function updateTimer() {
   hours.textContent = displayHours.toString().padStart(2, '0');
   elapsedSeconds = totalSeconds;
 }
+
 
 startStopBtn.addEventListener('click', toggleStartStop);
 resetBtn.addEventListener('click', resetTimer);

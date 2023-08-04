@@ -42,27 +42,39 @@
             </div>
             <textarea type="text" id="userInput" placeholder="Enter your text here"></textarea>
             <div id="second-banner">
-                <div id="buttonContainer">
+                <div class="linkContainer">
                     <a href="https://docs.google.com/document/u/0/" target="_blank">
-                        <button id="button-56" role="button">Google Docs</button>
+                        <button class="button-56" role="button">Google Docs</button>
                     </a>
                     <a href="https://chat.openai.com" target="_blank">
-                        <button id="button-56" role="button">Chat GPT</button>
+                        <button class="button-56" role="button">Chat GPT</button>
+                    </a>
+                    <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">
+                        <button class="button-56" role="button">Gmail</button>
+                    </a>
+                    <a href="https://www.merriam-webster.com" target="_blank">
+                        <button class="button-56" role="button">Dictionary</button>
+                    </a>
+                    <a href="https://www.merriam-webster.com/thesaurus?utm_source=google&utm_campaign=thesaurus&utm_medium=cpc&gclid=CjwKCAjww7KmBhAyEiwA5-PUSpIBMlrHj-bXdirdMWwIOkRv4YVtFh4YdErevzMEAN58EOzEh7XLExoCS5sQAvD_BwE"
+                        target="_blank">
+                        <button class="button-56" role="button">Thesaurus</button>
                     </a>
                 </div>
                 <div class="container">
                     <div id="shadowContainer">
-                        <h1>Log your Hours</h1>
+                        <h1 id="hoursLog">Log your Hours</h1>
                         <div class="stopwatch">
                             <div class="display">
                                 <div class="timer">
-                                    <span class="hours">00</span>:
-                                    <span class="minutes">00</span>:
-                                    <span class="seconds">00</span>
+                                    <span class="hours timerNumber">00</span>
+                                    <span id="timerNumber">:</span>
+                                    <span class="minutes timerNumber">00</span>
+                                    <span id="timerNumber">:</span>
+                                    <span class="seconds timerNumber">00</span>
                                 </div>
                                 <div id="timerButtonContainer">
-                                    <button class="start-stop" id="button-56">Start</button>
-                                    <button class="reset" id="button-56">Reset</button>
+                                    <button class="start-stop button-56">Start</button>
+                                    <button class="reset button-56">Reset</button>
                                 </div>
                             </div>
                         </div>
