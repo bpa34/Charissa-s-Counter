@@ -161,7 +161,7 @@ body {
         margin: var(--spacing-3) 0;
         border: 2px solid #111;
         background-color: #f4f4f4;
-        width: 45%;
+        width: 55%;
         border-radius: 8px;
         opacity: 80;
     }
@@ -174,8 +174,12 @@ body {
     .infoContainer p {
         display: flex;
         justify-content: center;
-        font-size: var(--spacing-4);
+        font-size: 1.5rem;
         font-weight: 500;
+    }
+
+    h3 {
+        font-size: 1.5rem;
     }
 
     /* Text Area */
@@ -259,26 +263,24 @@ body {
 
     #second-banner {
         display: flex;
+        margin-top: var(--spacing-2);
     }
 
     /* Links */
 
     .linkContainer {
         background-color: white;
-        padding: var(--spacing-2);
+        padding: var(--spacing-4);
         border-radius: var(--border-radius);
         border: 2px solid #111;
         z-index: 0;
-        display: flex;
+        display: inline-flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: flex-start;
+        flex-direction: column;
     }
     
-    .linkContainer a {
-        width: 60%; /* Adjust the width as needed to create the gap between the columns */
-        margin-bottom: var(--spacing-1);
-    }
-    
+   
 
     
 
@@ -326,40 +328,50 @@ body {
         z-index: 0;
         padding: var(--spacing-2);
         display: flex;
+        flex-direction: column;
         position: relative;
-        height: auto;
+        height: fit-content;
     }
-
     
-
-    .stopwatch {
-        display: inline-block;
-        padding: 20px;
-        border-radius: 8px;
+    #content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
-
+    
+    .stopwatch {
+        display: flex;
+        flex-direction: column;
+        padding: .75rem .75rem 0 .75rem;
+        border-radius: 8px;
+        justify-content: center;
+        align-items: center;
+    }
+    
     .display {
         font-size: 2em;
         font-weight: bold;
-        margin-bottom: 10px;
     }
-
+    
     .controls {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-
+    
     #timerButtonContainer {
         display: inline-flex;
         z-index: 1;
-        
     }
-
+    
     .timerNumber {
         font-size: 2.5rem;
     }
-
+    
+    
+    
+    
     
 
     
